@@ -43,8 +43,8 @@ what iOS blocks and what it does not.
   directory walk. Archives land in the app's Documents, ready for AirDrop or Files.
 - **App Groups.** The shared containers each app writes to, browsable and exportable like any
   other.
-- **Web server.** The same features over HTTP on port 8080, behind a generated three-word
-  passphrase, so you can pull a container off the phone from a laptop.
+- **Web server.** The same features over HTTPS on port 8443, behind a generated 160-bit
+  password, so you can pull a container off the phone from a laptop.
 - **Settings.** Show system apps, show unidentified containers, rescan, clear the cache.
 
 ## Screenshots
@@ -106,7 +106,7 @@ Pass them as launch arguments, for example
 
 | flag | effect |
 |---|---|
-| `--serve` | start the HTTP server at launch and print every address |
+| `--serve` | start the HTTPS server at launch and print every address |
 | `--server-tab`, `--settings-tab` | open on that tab |
 | `--app <bundleID>` | push an app's detail page |
 | `--browse-path <path>` | open the file browser on a path |
@@ -124,8 +124,9 @@ Pass them as launch arguments, for example
   needs its own parser, so rows fall back to gradient initials.
 - **This is not a jailbreak.** It gives read-write access to containers, not code execution
   outside the app.
-- **The web server speaks plain HTTP.** The passphrase crosses the network in clear text, and
-  anyone who has it can read every container the phone can reach.
+- **The web server certificate is self-signed.** The browser warns until you accept it.
+  Compare the SHA-256 fingerprint in the Server tab with the certificate the browser shows.
+  Anyone with the password can read every container the phone can reach.
 - **Exports are copies.** Large containers take time and disk space, because the archive is
   written inside the app's container before you share it.
 

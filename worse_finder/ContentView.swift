@@ -7,7 +7,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var store = Store()
-    @StateObject private var server = WebServer(passphrase: Passphrase.current())
+    @StateObject private var server = WebServer()
     @State private var tab = CommandLine.arguments.contains("--server-tab") ? 1
         : CommandLine.arguments.contains("--settings-tab") ? 2 : 0
 
@@ -56,7 +56,7 @@ struct ContentView: View {
             if CommandLine.arguments.contains("--serve") {
                 server.start()
                 for (name, address) in Interfaces.detailed() {
-                    print("[http] \(name) http://\(address):\(server.port)/?k=\(server.passphrase)")
+                    print("[http] \(name) https://\(address):\(server.port)/")
                 }
             }
         }

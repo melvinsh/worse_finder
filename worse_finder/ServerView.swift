@@ -39,7 +39,7 @@ struct ServerView: View {
                 } header: {
                     Text("Server")
                 } footer: {
-                    Text("Plain HTTP on the local network. Anyone with the passphrase can read every app container this phone can reach.")
+                    Text("HTTPS on the local network, with a self-signed certificate. The browser warning is expected; compare it with the fingerprint below. Anyone with the password can read every app container this phone can reach.")
                 }
 
                 Section("Open on another device") {
@@ -48,7 +48,7 @@ struct ServerView: View {
                             .foregroundStyle(.secondary)
                     } else {
                         ForEach(addresses, id: \.self) { address in
-                            let url = "http://\(address):\(server.port)/?k=\(server.passphrase)"
+                            let url = "https://\(address):\(server.port)/#k=\(server.password.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) ?? server.password)"
                             Button {
                                 UIPasteboard.general.string = url
                                 flash("url")
@@ -67,23 +67,47 @@ struct ServerView: View {
                     }
                 }
 
-                Section("Passphrase") {
+                Section("Password") {
                     Button {
-                        UIPasteboard.general.string = server.passphrase
+                        UIPasteboard.general.string = server.password
                         flash("pass")
                     } label: {
-                        HStack {
-                            Text(server.passphrase)
-                                .font(.system(.body, design: .monospaced))
+                        HStack(alignment: .firstTextBaseline) {
+                            Text(server.password)
+                                .font(.system(size: 15, design: .monospaced))
                                 .foregroundStyle(.primary)
-                            Spacer()
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(3)
+                                .frame(maxWidth: .infinity, alignment: .leading)
                             Image(systemName: copied == "pass" ? "checkmark" : "doc.on.doc")
                                 .foregroundStyle(.secondary)
                         }
                     }
-                    Button("Generate a new passphrase", role: .destructive) {
-                        server.rotatePassphrase()
+                    Button("Generate a new password", role: .destructive) {
+                        server.rotatePassword()
                     }
+                }
+
+                Section {
+                    Button {
+                        UIPasteboard.general.string = server.fingerprint
+                        flash("cert")
+                    } label: {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(server.fingerprint.isEmpty ? "Unavailable" : server.fingerprint)
+                                .font(.system(size: 12, design: .monospaced))
+                                .foregroundStyle(.primary)
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(4)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            Text(copied == "cert" ? "copied" : "SHA-256 fingerprint")
+                                .font(.caption2)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    .disabled(server.fingerprint.isEmpty)
+                } header: {
+                    Text("Certificate")
                 }
 
                 Section("Requests") {
@@ -102,6 +126,7 @@ struct ServerView: View {
             .navigationTitle("Server")
             .task {
                 server.appsProvider = { store.apps }
+                server.refreshIdentity()
                 if store.apps.isEmpty { store.scan() }
             }
             .onDisappear {

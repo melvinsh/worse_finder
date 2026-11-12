@@ -18,6 +18,7 @@
 		A1000000000000000000000B /* MCM.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000002D /* MCM.m */; };
 		A1000000000000000000000C /* LSStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000002F /* LSStore.m */; };
 		A1000000000000000000000D /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000034 /* Server.swift */; };
+		A1000000000000000000003A /* TLSIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000003B /* TLSIdentity.swift */; };
 		A1000000000000000000000E /* ServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000035 /* ServerView.swift */; };
 		A1000000000000000000000F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000036 /* SettingsView.swift */; };
 		A10000000000000000000010 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000037 /* Diagnostics.swift */; };
@@ -44,6 +45,7 @@
 		A1000000000000000000002E /* LSStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSStore.h; sourceTree = "<group>"; };
 		A1000000000000000000002F /* LSStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSStore.m; sourceTree = "<group>"; };
 		A10000000000000000000034 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		A1000000000000000000003B /* TLSIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLSIdentity.swift; sourceTree = "<group>"; };
 		A10000000000000000000035 /* ServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerView.swift; sourceTree = "<group>"; };
 		A10000000000000000000036 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A10000000000000000000037 /* Diagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostics.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				A1000000000000000000001E /* AppsView.swift */,
 				A1000000000000000000001F /* FileBrowserView.swift */,
 				A10000000000000000000034 /* Server.swift */,
+				A1000000000000000000003B /* TLSIdentity.swift */,
 				A10000000000000000000035 /* ServerView.swift */,
 				A10000000000000000000036 /* SettingsView.swift */,
 				A10000000000000000000037 /* Diagnostics.swift */,
@@ -183,6 +186,7 @@
 				A1000000000000000000000B /* MCM.m in Sources */,
 				A1000000000000000000000C /* LSStore.m in Sources */,
 				A1000000000000000000000D /* Server.swift in Sources */,
+				A1000000000000000000003A /* TLSIdentity.swift in Sources */,
 				A1000000000000000000000E /* ServerView.swift in Sources */,
 				A1000000000000000000000F /* SettingsView.swift in Sources */,
 				A10000000000000000000010 /* Diagnostics.swift in Sources */,

@@ -402,21 +402,29 @@ gradient/initials tiles.
 
 ### The server
 
-`WebServer` is a `NWListener` on :8080 that offers the same features as the Apps tab:
+`WebServer` is a TLS `NWListener` on :8443. The certificate is self-signed (P-256, key in the
+keychain). Its subject alternative names cover `worse-finder.local`, `127.0.0.1`, and up to
+eight IPv4 addresses the phone has used. A new address re-signs with the same key. There is
+no plaintext listener. The Server tab shows the certificate's SHA-256 fingerprint.
 
 ```
+POST /login               form field `k`, sets an HttpOnly Secure cookie
 GET /                     app list
 GET /a/<uuid>?p=<path>    directory listing
 GET /f/<uuid>?p=<path>    file download
 GET /z/<uuid>             build and download a ZIP of the container
 ```
 
-Auth is a generated three-word passphrase (`amber-copper-lunar` style, 160³ ≈ 4.1M
-combinations) passed as `?k=`, mirrored into a cookie on first use. Failed attempts are
-throttled to one per second, which puts brute force out of reach. No TLS: the passphrase
-crosses the LAN in clear text.
+Auth is a 160-bit password from `SecRandomCopyBytes`, base32, stored in the keychain. The
+copied link is `https://<ip>:8443/#k=<password>`. The page posts that fragment and then drops
+it, so the secret is not a query parameter. Failed guesses are counted for the whole process:
+after five, the server locks out, starting at one second and doubling up to 15 minutes, and
+it does not check the password during a lockout. More than eight connections that have not
+authenticated are dropped.
 
-Verified from another machine over the CoreDevice USB tunnel (`http://<device>:8080`):
+An earlier build served plain HTTP on :8080 with a three-word passphrase in `?k=` (about 22
+bits, and the one-second delay was per connection). Checked then over the CoreDevice USB
+tunnel (`http://<device>:8080`):
 
 ```
 GET /?k=…                200, 85 KB, 272 apps, 0 blank names
@@ -468,7 +476,7 @@ Those stale containers are still browsable through the web server, which deliber
 everything. Hiding is a phone-UI preference, not a data restriction.
 
 **Settings** (third tab): show system apps, show unidentified containers, rescan, clear cache,
-container/visible counts, server state, passphrase, build info.
+container/visible counts, server state, password, build info.
 
 **Empty states**: scanning, nothing scanned yet, only-system-hidden (with a "Show system apps"
 button), and no search matches, each a gradient tile, title, one line of explanation and a
@@ -523,7 +531,7 @@ zip           196 entries, 20,703,654 B, unzip -t clean
 books         556 files / 59,333,269 B, exporter totals equal unzip's, byte for byte
 empty         0 files → 22-byte archive with a valid EOCD
 cancel        "Export cancelled.", no partial archive left behind
-browser       ~/Library/Preferences, 20 items, __gads__.plist 42 bytes, same as the HTTP side
+browser       ~/Library/Preferences, 20 items, __gads__.plist 42 bytes, same as the web server
 ```
 
 App Groups: `LSApplicationProxy.groupContainerURLs` answers in-sandbox (5 apps, 18 groups:

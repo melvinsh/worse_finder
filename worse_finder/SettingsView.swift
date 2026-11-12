@@ -77,8 +77,14 @@ struct SettingsView: View {
                     LabeledContent("Containers found", value: "\(store.apps.count)")
                     LabeledContent("Visible in Apps", value: "\(visibleCount)")
                     LabeledContent("Web server", value: server.running ? "on :\(String(server.port))" : "off")
-                    LabeledContent("Passphrase", value: server.passphrase)
-                        .textSelection(.enabled)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Password")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                        Text(server.password)
+                            .font(.system(.footnote, design: .monospaced))
+                            .textSelection(.enabled)
+                    }
                 }
 
                 Section {
