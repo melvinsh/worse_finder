@@ -15,12 +15,6 @@
   <img alt="status" src="https://img.shields.io/badge/status-proof%20of%20concept-orange">
 </p>
 
-<p align="center">
-  <img src="screenshots/apps.png" width="280">
-  <img src="screenshots/detail.png" width="280">
-  <img src="screenshots/browser.png" width="280">
-</p>
-
 ---
 
 ## What this is
