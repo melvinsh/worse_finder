@@ -55,6 +55,8 @@ what iOS blocks and what it does not.
 | Apps you installed. System containers stay hidden. | Safari, with its App Groups and export |
 | <img src="screenshots/browser.png" width="240"> | <img src="screenshots/settings.png" width="240"> |
 | Inside Safari's container | What the scan found, and what stays hidden |
+| <img src="screenshots/web.png" width="240"> | |
+| The same folder, from the web server | |
 
 ## How it works
 
