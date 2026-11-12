@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* WorseFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000011 /* WorseFinderApp.swift */; };
+		A10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* ContentView.swift */; };
+		A10000000000000000000004 /* Escape.m in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000014 /* Escape.m */; };
+		A10000000000000000000005 /* ZipWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000001A /* ZipWriter.m */; };
+		A10000000000000000000006 /* Names.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000001C /* Names.m */; };
+		A10000000000000000000007 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000001D /* Store.swift */; };
+		A10000000000000000000008 /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000001E /* AppsView.swift */; };
+		A10000000000000000000009 /* FileBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000001F /* FileBrowserView.swift */; };
+		A1000000000000000000000B /* MCM.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000002D /* MCM.m */; };
+		A1000000000000000000000C /* LSStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000002F /* LSStore.m */; };
+		A1000000000000000000000D /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000034 /* Server.swift */; };
+		A1000000000000000000000E /* ServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000035 /* ServerView.swift */; };
+		A1000000000000000000000F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000036 /* SettingsView.swift */; };
+		A10000000000000000000010 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000037 /* Diagnostics.swift */; };
+		A10000000000000000000039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000038 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000000000000000000011 /* WorseFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorseFinderApp.swift; sourceTree = "<group>"; };
+		A10000000000000000000012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A10000000000000000000014 /* Escape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Escape.m; sourceTree = "<group>"; };
+		A10000000000000000000015 /* Escape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Escape.h; sourceTree = "<group>"; };
+		A10000000000000000000016 /* worse_finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "worse_finder-Bridging-Header.h"; sourceTree = "<group>"; };
+		A10000000000000000000017 /* worse_finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = worse_finder.entitlements; sourceTree = "<group>"; };
+		A10000000000000000000018 /* worse_finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worse_finder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000019 /* ZipWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZipWriter.h; sourceTree = "<group>"; };
+		A1000000000000000000001A /* ZipWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZipWriter.m; sourceTree = "<group>"; };
+		A1000000000000000000001B /* Names.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Names.h; sourceTree = "<group>"; };
+		A1000000000000000000001C /* Names.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Names.m; sourceTree = "<group>"; };
+		A1000000000000000000001D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		A1000000000000000000001E /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
+		A1000000000000000000001F /* FileBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileBrowserView.swift; sourceTree = "<group>"; };
+		A1000000000000000000002C /* MCM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCM.h; sourceTree = "<group>"; };
+		A1000000000000000000002D /* MCM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCM.m; sourceTree = "<group>"; };
+		A1000000000000000000002E /* LSStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSStore.h; sourceTree = "<group>"; };
+		A1000000000000000000002F /* LSStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSStore.m; sourceTree = "<group>"; };
+		A10000000000000000000034 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		A10000000000000000000035 /* ServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerView.swift; sourceTree = "<group>"; };
+		A10000000000000000000036 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A10000000000000000000037 /* Diagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostics.swift; sourceTree = "<group>"; };
+		A10000000000000000000038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000000000000000000021 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000000000000000000031 = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000032 /* worse_finder */,
+				A10000000000000000000033 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000032 /* worse_finder */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000011 /* WorseFinderApp.swift */,
+				A10000000000000000000012 /* ContentView.swift */,
+				A1000000000000000000001D /* Store.swift */,
+				A1000000000000000000001E /* AppsView.swift */,
+				A1000000000000000000001F /* FileBrowserView.swift */,
+				A10000000000000000000034 /* Server.swift */,
+				A10000000000000000000035 /* ServerView.swift */,
+				A10000000000000000000036 /* SettingsView.swift */,
+				A10000000000000000000037 /* Diagnostics.swift */,
+				A10000000000000000000038 /* Assets.xcassets */,
+				A1000000000000000000002D /* MCM.m */,
+				A1000000000000000000002C /* MCM.h */,
+				A1000000000000000000002F /* LSStore.m */,
+				A1000000000000000000002E /* LSStore.h */,
+				A10000000000000000000014 /* Escape.m */,
+				A10000000000000000000015 /* Escape.h */,
+				A1000000000000000000001C /* Names.m */,
+				A1000000000000000000001B /* Names.h */,
+				A1000000000000000000001A /* ZipWriter.m */,
+				A10000000000000000000019 /* ZipWriter.h */,
+				A10000000000000000000016 /* worse_finder-Bridging-Header.h */,
+				A10000000000000000000017 /* worse_finder.entitlements */,
+			);
+			path = worse_finder;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000033 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000018 /* worse_finder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000000000000000000041 /* worse_finder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000051 /* Build configuration list for PBXNativeTarget "worse_finder" */;
+			buildPhases = (
+				A10000000000000000000022 /* Sources */,
+				A10000000000000000000021 /* Frameworks */,
+				A10000000000000000000023 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = worse_finder;
+			productName = worse_finder;
+			productReference = A10000000000000000000018 /* worse_finder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000000000000000000042 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2720;
+				LastUpgradeCheck = 2720;
+				TargetAttributes = {
+					A10000000000000000000041 = {
+						CreatedOnToolsVersion = 27.2;
+					};
+				};
+			};
+			buildConfigurationList = A10000000000000000000052 /* Build configuration list for PBXProject "worse_finder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000000000000000000031;
+			productRefGroup = A10000000000000000000033 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000041 /* worse_finder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000000000000000000023 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000039 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000000000000000000022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000002 /* ContentView.swift in Sources */,
+				A10000000000000000000001 /* WorseFinderApp.swift in Sources */,
+				A10000000000000000000007 /* Store.swift in Sources */,
+				A10000000000000000000008 /* AppsView.swift in Sources */,
+				A10000000000000000000009 /* FileBrowserView.swift in Sources */,
+				A1000000000000000000000B /* MCM.m in Sources */,
+				A1000000000000000000000C /* LSStore.m in Sources */,
+				A1000000000000000000000D /* Server.swift in Sources */,
+				A1000000000000000000000E /* ServerView.swift in Sources */,
+				A1000000000000000000000F /* SettingsView.swift in Sources */,
+				A10000000000000000000010 /* Diagnostics.swift in Sources */,
+				A10000000000000000000004 /* Escape.m in Sources */,
+				A10000000000000000000006 /* Names.m in Sources */,
+				A10000000000000000000005 /* ZipWriter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10000000000000000000061 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A10000000000000000000062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A10000000000000000000063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				CODE_SIGN_ENTITLEMENTS = worse_finder/worse_finder.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = worse_finder;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Serves the app browser to other devices on your network.";
+				INFOPLIST_KEY_UIFileSharingEnabled = YES;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.worsefinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "worse_finder/worse_finder-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A10000000000000000000064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				CODE_SIGN_ENTITLEMENTS = worse_finder/worse_finder.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = worse_finder;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Serves the app browser to other devices on your network.";
+				INFOPLIST_KEY_UIFileSharingEnabled = YES;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.worsefinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "worse_finder/worse_finder-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000000000000000000051 /* Build configuration list for PBXNativeTarget "worse_finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000063 /* Debug */,
+				A10000000000000000000064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000000000000000000052 /* Build configuration list for PBXProject "worse_finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000061 /* Debug */,
+				A10000000000000000000062 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10000000000000000000042 /* Project object */;
+}

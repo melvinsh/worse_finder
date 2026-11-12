@@ -1,0 +1,11 @@
+# build output
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcresult
+
+# agent/harness state, never part of the project
+.pi/
+
+.DS_Store
