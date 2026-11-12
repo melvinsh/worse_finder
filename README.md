@@ -16,9 +16,9 @@
 </p>
 
 <p align="center">
+  <img src="screenshots/apps.png" width="280">
   <img src="screenshots/detail.png" width="280">
   <img src="screenshots/browser.png" width="280">
-  <img src="screenshots/apps.png" width="280">
 </p>
 
 ---
@@ -55,12 +55,12 @@ what iOS blocks and what it does not.
 
 ## Screenshots
 
-| | | |
-|---|---|---|
-| <img src="screenshots/detail.png" width="240"> | <img src="screenshots/browser.png" width="240"> | <img src="screenshots/settings.png" width="240"> |
-| App detail: containers, App Groups, export | File browser with symlink and broken-link handling | Settings, with the system-app toggles |
-| <img src="screenshots/apps.png" width="240"> | <img src="screenshots/empty.png" width="240"> | <img src="screenshots/server.png" width="240"> |
-| Every container, including system services | Empty states instead of blank screens | The HTTP server, passphrase-gated |
+| | |
+|---|---|
+| <img src="screenshots/apps.png" width="240"> | <img src="screenshots/detail.png" width="240"> |
+| Apps you installed. System containers stay hidden. | Safari, with its App Groups and export |
+| <img src="screenshots/browser.png" width="240"> | <img src="screenshots/settings.png" width="240"> |
+| Inside Safari's container | What the scan found, and what stays hidden |
 
 ## How it works
 
