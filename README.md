@@ -77,7 +77,7 @@ container_copy_sandbox_token()    ──▶  token for the resolved target
 sandbox_extension_consume()       ──▶  read-write on that path
 ```
 
-The escape is about 150 lines in `worse_finder/Escape.m`. The rest is the app on top of it:
+The escape itself is one function in `worse_finder/Escape.m`. The rest is the app on top of it:
 `LSStore.m` parses lsd's `bdsl` CSStore to turn container UUIDs into bundle IDs, `MCM.m` reads
 names and App Groups from LaunchServices, `ZipWriter.m` writes the archives, and `Store.swift`
 with `Server.swift` does the rest.
